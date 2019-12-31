@@ -38,12 +38,20 @@
 		}).addTo(map);
 		marker.bindPopup('');
 		//Pixels
-		var local_bases = L.marker([7, -29], [0, 10]). addTo(map);
-			local_bases.bindPopup('marker 2');
+		var base1 = L.marker([7, -29]). addTo(map);
+			base1.bindPopup('Base 1');
+
+		var resource1 = L.marker([-60, -30]). addTo(map);
+			resource1.bindPopup('Resource 1');
+
+		var ally1 = L.marker([-25, 40]). addTo(map);
+			ally1.bindPopup('Ally 1');
 		
+		var enemy1 = L.marker([20, 56]). addTo(map);
+			enemy1.bindPopup('Enemy 1');
+
   		marker.on('dragend', function(e) {
-  			marker.getPopup().setContent('Clicked ' + marker.getLatLng().toString() + '<br />'
-  				+ 'Pixels ' + map.project(marker.getLatLng(), map.getMaxZoom().toString))
+  			marker.getPopup().setContent('Clicked ' + marker.getLatLng().toString())
   			.openOn(map);
   		});
 
