@@ -38,8 +38,8 @@
 		}).addTo(map);
 		marker.bindPopup('');
 		//Pixels
-		var marker_2 = L.marker([7, -29]). addTo(map);
-		marker_2.bindPopup('marker 2');
+		var local_bases = L.marker([7, -29], [0, 10]). addTo(map);
+			local_bases.bindPopup('marker 2');
 		
   		marker.on('dragend', function(e) {
   			marker.getPopup().setContent('Clicked ' + marker.getLatLng().toString() + '<br />'
